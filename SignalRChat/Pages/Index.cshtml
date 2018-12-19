@@ -1,10 +1,31 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!--
+Create text boxes for name and message text, and a submit button.
+Create a list with id="messagesList" for displaying messages that are received from the SignalR hub.
+Include script references to SignalR and the chat.js application code 
+-->
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            User..........<input type="text" id="userInput" />
+            <br />
+            Message...<input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
 </div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
