@@ -1,0 +1,43 @@
+﻿@page
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            User: <input type="text" id="userInput" />
+            <!--
+                <br />
+                Message...<input type="text" id="messageInput" />
+            -->
+        </div>
+        <div class="col-6">&nbsp;</div>
+    </div>
+    <div class="row">POLL: Who is your Captain now?&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <!-- input type="radio" name="group1" id="r1" value="1" /><label for="r1"> button one</label>-->
+
+            <input type="radio" name="myCaptain" id="captainMarvel" value="Captain Marvel" />
+            <label for="captainMarvel">Captain Marvel</label>
+            <br /><span id="captainMarvelBlock"></span><br />
+            <input type="radio" name="myCaptain" id="captainAmerica" value="Captain America" />
+            <label for="captainAmerica">Captain America</label>
+            <br /><span id="captainAmericaBlock"></span><br />
+            <input type="radio" name="myCaptain" id="captainMe" value="I am the Captain Now" />
+            <label for="captainMe">I am the Captain Now</label>
+            <br /><span id="captainMeBlock"></span><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" id="sendButton" value="Vote Now" />
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/poll.js"></script>

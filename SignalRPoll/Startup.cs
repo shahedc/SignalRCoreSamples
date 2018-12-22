@@ -59,7 +59,9 @@ namespace SignalRPoll
 
             app.UseSignalR(routes =>
             {
+                routes.MapHub<StreamHub>("/streamHub");
                 routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<PollHub>("/pollHub");
             });
 
             app.UseMvc();
