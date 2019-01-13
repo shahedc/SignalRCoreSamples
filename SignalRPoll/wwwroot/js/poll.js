@@ -13,9 +13,15 @@ connection.on("ReceiveMessage", function (user, message, myCaptainId, myCaptainV
     // liMessage.textContent = encodedMsg;
     // document.getElementById("messagesList").appendChild(liMessage);
 
+    var ulPoll = document.getElementById("messagesList");
     var liPollResult = document.createElement("li");
     liPollResult.textContent = pollResultMsg;
-    document.getElementById("messagesList").appendChild(liPollResult);
+
+    // append to top
+    ulPoll.insertBefore(liPollResult, ulPoll.childNodes[0]);
+
+    // append to end
+    // document.getElementById("messagesList").appendChild(liPollResult);
 
     // append to chart block
     document.getElementById(myCaptainId + 'Block').innerHTML += chartBlock;
